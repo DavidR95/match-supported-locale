@@ -16,7 +16,7 @@ describe('find-first-supported-locale', () => {
       [['ZH-HANS'], ['zh-Hans'], 'ZH-HANS'],
       [['zh-Hans'], ['zh-Hons'], undefined],
     ])(
-      'from locales: %j, and supported locales %j, it should return "%s"',
+      'from locales: %j, and supported locales: %j, it should return "%s"',
       (
         locales: string[],
         supportedLocales: string[],
