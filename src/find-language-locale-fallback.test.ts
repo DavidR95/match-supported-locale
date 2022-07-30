@@ -9,8 +9,8 @@ describe('find-language-locale-fallback', () => {
       ['zh', { zh: 'zh-Hans' }, 'zh-Hans'],
       ['zh-Hans', { zh: 'zh-Hans' }, 'zh-Hans'],
       ['zh-Hans-HK', { zh: 'zh-Hans' }, 'zh-Hans'],
-      ['zh-Hons', { zh: 'zh-Hans' }, 'zh-Hans'],
-      ['zh-Hons-HK', { zh: 'zh-Hans' }, 'zh-Hans'],
+      ['zh-Hant', { zh: 'zh-Hans' }, 'zh-Hans'],
+      ['zh-Hant-HK', { zh: 'zh-Hans' }, 'zh-Hans'],
       ['zh', { ZH: 'zh-Hans' }, 'zh-Hans'],
     ])(
       'from locale "%s", and language locale fallbacks: %j, it should return "%s"',
