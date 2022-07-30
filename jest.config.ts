@@ -1,4 +1,4 @@
-import { InitialOptionsTsJest } from 'ts-jest';
+import type { InitialOptionsTsJest } from 'ts-jest';
 
 export default <InitialOptionsTsJest>{
   preset: 'ts-jest',
