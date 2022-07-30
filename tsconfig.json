@@ -1,0 +1,9 @@
+
+{
+    "extends": "@tsconfig/strictest/tsconfig.json",
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "outDir": "dist",
+    },
+    "include": ["src"]
+  }
