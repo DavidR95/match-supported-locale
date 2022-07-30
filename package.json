@@ -2,7 +2,12 @@
   "name": "match-supported-locale",
   "version": "1.0.0",
   "description": "A small, zero-dependency, TypeScript-compatible utility for best-matching a locale against a list of supported locales.",
-  "keywords": ["locale", "match locale", "match supported locale", "best-match supported locale"],
+  "keywords": [
+    "locale",
+    "match locale",
+    "match supported locale",
+    "best-match supported locale"
+  ],
   "homepage": "https://github.com/DavidR95/match-supported-locale#readme",
   "license": "ISC",
   "main": "dist/index.js",
