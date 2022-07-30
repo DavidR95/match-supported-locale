@@ -6,6 +6,7 @@ describe('index', () => {
       ['', [], {}, undefined],
       ['', [''], {}, undefined],
       ['zh', [''], {}, undefined],
+      ['zh', [''], undefined, undefined],
       ['zh', ['zh'], {}, 'zh'],
       ['zh-Hans', ['zh-Hans'], {}, 'zh-Hans'],
       ['zh-Hans', ['zh', 'zh-Hans', 'zh-Hans-HK'], {}, 'zh-Hans'],
@@ -18,7 +19,7 @@ describe('index', () => {
       (
         locale: string,
         supportedLocales: string[],
-        languageLocaleFallbacks: Record<string, string>,
+        languageLocaleFallbacks: Record<string, string> | undefined,
         expectedLocale: string | undefined,
       ) => {
         expect(
