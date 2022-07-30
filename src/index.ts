@@ -1,6 +1,9 @@
 import { getAllSubLocales } from './get-all-sub-locales';
 import { findFirstSupportedLocale } from './find-first-supported-locale';
-import { findLanguageLocaleFallback } from './find-language-locale-fallback';
+import {
+  findLanguageLocaleFallback,
+  LanguageLocaleFallbacks,
+} from './find-language-locale-fallback';
 
 /**
  * For the given locale, attempts to return the closest matching supported locale.
@@ -20,7 +23,7 @@ import { findLanguageLocaleFallback } from './find-language-locale-fallback';
 export const matchSupportedLocale = (
   locale: string,
   supportedLocales: string[],
-  languageLocaleFallbacks?: Record<string, string>,
+  languageLocaleFallbacks?: LanguageLocaleFallbacks,
 ): string | undefined => {
   const allSubLocales = getAllSubLocales(locale);
   const firstSupportedLocale = findFirstSupportedLocale(

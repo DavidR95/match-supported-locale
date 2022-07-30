@@ -1,4 +1,4 @@
-type LanguageLocaleFallbacks = Record<string, string>;
+export type LanguageLocaleFallbacks = Record<string, string>;
 
 /**
  * For the given locale, returns the language-wide fallback determined by the

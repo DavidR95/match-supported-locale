@@ -1,4 +1,4 @@
-import { findLanguageLocaleFallback } from './find-language-locale-fallback';
+import { findLanguageLocaleFallback, LanguageLocaleFallbacks } from './find-language-locale-fallback';
 
 describe('find-language-locale-fallback', () => {
   describe('findLanguageLocaleFallback', () => {
@@ -16,7 +16,7 @@ describe('find-language-locale-fallback', () => {
       'from locale "%s", and language locale fallbacks: %j, it should return "%s"',
       (
         locale: string,
-        languageLocaleFallbacks: Record<string, string>,
+        languageLocaleFallbacks: LanguageLocaleFallbacks,
         expectedLocale: string | undefined,
       ) => {
         expect(
