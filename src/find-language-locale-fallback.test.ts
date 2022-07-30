@@ -1,4 +1,7 @@
-import { findLanguageLocaleFallback, LanguageLocaleFallbacks } from './find-language-locale-fallback';
+import {
+  findLanguageLocaleFallback,
+  LanguageLocaleFallbacks,
+} from './find-language-locale-fallback';
 
 describe('find-language-locale-fallback', () => {
   describe('findLanguageLocaleFallback', () => {
