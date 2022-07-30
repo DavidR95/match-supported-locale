@@ -10,9 +10,9 @@ describe('index', () => {
       ['zh-Hans', ['zh-Hans'], {}, 'zh-Hans'],
       ['zh-Hans', ['zh', 'zh-Hans', 'zh-Hans-HK'], {}, 'zh-Hans'],
       ['zh-Hans-HK', ['zh', 'zh-Hans', 'zh-Hans-HK'], {}, 'zh-Hans-HK'],
-      ['zh', ['zh-Hans'], { zh: 'zh-Hans'}, 'zh-Hans'],
+      ['zh', ['zh-Hans'], { zh: 'zh-Hans' }, 'zh-Hans'],
       ['zh-Hant', ['zh-Hans'], { zh: 'zh-Hans' }, 'zh-Hans'],
-      ['zh-Hans-HK', ['zh-Hans'], { zh: 'zh-Hant'}, 'zh-Hans'],
+      ['zh-Hans-HK', ['zh-Hans'], { zh: 'zh-Hant' }, 'zh-Hans'],
     ])(
       'from locale "%s", supported locales: %j and language locale fallbacks: %j, it should return "%s"',
       (
@@ -22,7 +22,11 @@ describe('index', () => {
         expectedLocale: string | undefined,
       ) => {
         expect(
-          matchSupportedLocale(locale, supportedLocales, languageLocaleFallbacks),
+          matchSupportedLocale(
+            locale,
+            supportedLocales,
+            languageLocaleFallbacks,
+          ),
         ).toEqual(expectedLocale);
       },
     );
