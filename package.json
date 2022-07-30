@@ -9,6 +9,7 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "tsc",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --ignore-path .gitignore --write .",
     "prelint": "npm run format",
     "lint": "eslint --ignore-path .gitignore .",
