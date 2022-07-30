@@ -19,7 +19,9 @@
     "format": "prettier --ignore-path .gitignore --write .",
     "prelint": "npm run format",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm run typecheck && npm run lint && npm run test"
   },
   "husky": {
     "hooks": {
