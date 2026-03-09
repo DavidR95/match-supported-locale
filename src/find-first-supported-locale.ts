@@ -6,11 +6,13 @@ export const findFirstSupportedLocale = (
   locales: string[],
   supportedLocales: string[],
 ): string | undefined => {
-  const lowerCaseSupportedLocales = supportedLocales.map((supportedLocale) =>
-    supportedLocale.toLowerCase(),
-  );
+  for (const locale of locales) {
+    for (const supportedLocale of supportedLocales) {
+      if (locale.toLowerCase() === supportedLocale.toLowerCase()) {
+        return supportedLocale;
+      }
+    }
+  }
 
-  return locales.find((locale) =>
-    lowerCaseSupportedLocales.includes(locale.toLowerCase()),
-  );
+  return undefined;
 };
